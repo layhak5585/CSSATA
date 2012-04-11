@@ -56,7 +56,7 @@
 .ui-widget { font-family: Arial, Verdana, sans-serif; font-size: 12px; }
 .ui-widget .ui-widget { font-size: 1em; }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Lucida Grande, Lucida Sans, Arial, sans-serif; font-size: 1em; }
-.ui-widget-content { /* border: 1px solid #dddddd;*/ background: #f2f5f7 url("../images_skin/ui-bg_highlight-hard_100_f2f5f7_1x100.png") 50% top repeat-x;  color: #362b36; }
+.ui-widget-content { /* border: 1px solid #dddddd;background: #f2f5f7 url("../images_skin/ui-bg_highlight-hard_100_f2f5f7_1x100.png") 50% top repeat-x;  */ color: #362b36; }
 .ui-widget-content a { color: #362b36; }
 .ui-widget-header { border: 1px solid #aed0ea; background: url("../images_skin/fond-popup-header.png") repeat scroll 0 0 transparent; color: #FFFFFF; font-weight: bold; }
 .ui-widget-header a { color: #222222; }
@@ -488,7 +488,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
 .ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
-.ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 0; background: none; }
+.ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 0 1em 0 1em; background: none; }
 .ui-tabs .ui-tabs-hide { display: none !important; }
 .ui-tabs.ui-tabs-top > .ui-tabs-nav {padding: 0.2em 0.2em 0 1em;}
 
@@ -518,19 +518,29 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .prime-tabs-lv2 .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }
 .prime-tabs-lv2 .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
 .prime-tabs-lv2 .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
-.prime-tabs-lv2 .ui-tabs-panel { display: block; border-width: 0; padding: 1em 1.4em; background: none; }
+.prime-tabs-lv2 .ui-tabs-panel { 
+	display: block; 
+	border-width: 0; 
+	padding: 1em 1.4em; 
+	background: none; 
+	border:1px solid #AED0EA;
+	}
+	
 .prime-tabs-lv2 .ui-tabs-hide { display: none !important; }
 
 .prime-tabs-lv2 .ui-tabs-nav li.ui-state-active{
 	background: url("../images_skin/rf-tabPannel-style1-cellactive-middlepart.png") repeat-x;
-	border:1px solid #AED0EA;
+	border-bottom:none;
+    border-top:1px solid #AED0EA;
+    border-right:1px solid #AED0EA;
+    border-left:1px solid #AED0EA; 
     font-weight: bold;
     color:#000000;
 }
 
 .prime-tabs-lv2 ul.ui-widget-header {
    	background:none;
-    border-bottom:1px solid #AED0EA;
+    border-bottom:none;
     border-top:none;
     border-right:none;
     border-left:none;  
@@ -538,11 +548,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
     font-weight: bold;
     padding:0px;
 }
-/*
- .prime-tabs-lv2 .ui-widget-content { 
-	 border: 1px solid #dddddd; 
-	 background: #f2f5f7 url("../images_skin/ui-bg_highlight-hard_100_f2f5f7_1x100.png") 50% top repeat-x; 
-	 color: #362b36; } */
+
 
 
 /*
