@@ -54,12 +54,13 @@
 /* Component containers
 ----------------------------------*/
 .ui-widget { font-family: Arial, Verdana, sans-serif; font-size: 12px; }
-.ui-widget .ui-widget { font-size: 1em; }
-.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Lucida Grande, Lucida Sans, Arial, sans-serif; font-size: 1em; }
-.ui-widget-content { border: 1px solid #dddddd; background: #f2f5f7 url("../images_skin/ui-bg_highlight-hard_100_f2f5f7_1x100.png") 50% top repeat-x; color: #362b36; }
+.ui-widget .ui-widget { font-size: 12px; }
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Arial,Verdana,sans-serif; font-size: 12px; }
+.ui-widget-content { border: 1px solid #dddddd; color: #362b36; background-color: white;font-size: 12px;}
 .ui-widget-content a { color: #362b36; }
 .ui-widget-header { border: 1px solid #aed0ea; background: url("../images_skin/fond-popup-header.png") repeat scroll 0 0 transparent; color: #FFFFFF; font-weight: bold; }
-.ui-widget-header a { color: #222222; }
+.ui-widget-header a { color: #012C4E;font-size: 11px;white-space: nowrap; }
+.ui-widget-header a:hover { color: #FF9900; }
 
 /* Interaction states
 ----------------------------------*/
@@ -88,9 +89,12 @@
 /* states and images */
 .ui-icon { width: 16px; height: 16px; background-image: url("../images_skin/ui-icons_72a7cf_256x240.png"); }
 .ui-widget-content .ui-icon {background-image: url("../images_skin/ui-icons_72a7cf_256x240.png"); }
-.ui-widget-header .ui-icon {background-image: url("../images_skin/ui-icons_72a7cf_256x240.png"); }
+.ui-widget-header .ui-icon {background-image: url("../images/close.gif"); }
+.prime-toolbar-separator .ui-icon {background-image: url("../images_skin/barre.png");margin-left: 2em;margin-right: 2em;width: 2px;}
+
 .ui-state-default .ui-icon { background-image: url("../images_skin/ui-icons_3d80b3_256x240.png"); }
 .ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url("../images_skin/ui-icons_2694e8_256x240.png"); }
+.ui-dialog-titlebar .ui-state-hover .ui-icon {background-image: url("../images/close.gif"); }
 .ui-state-active .ui-icon {background-image: url("../images_skin/ui-icons_ffffff_256x240.png"); }
 .ui-state-highlight .ui-icon {background-image: url("../images_skin/ui-icons_2e83ff_256x240.png"); }
 .ui-state-error .ui-icon, .ui-state-error-text .ui-icon {background-image: url("../images_skin/ui-icons_ffffff_256x240.png"); }
@@ -206,7 +210,7 @@
 .ui-icon-minus { background-position: -48px -128px; }
 .ui-icon-minusthick { background-position: -64px -128px; }
 .ui-icon-close { background-position: -80px -128px; }
-.ui-icon-closethick { background-position: -96px -128px; }
+.ui-icon-closethick { }
 .ui-icon-key { background-position: -112px -128px; }
 .ui-icon-lightbulb { background-position: -128px -128px; }
 .ui-icon-scissors { background-position: -144px -128px; }
@@ -265,7 +269,7 @@
 .ui-icon-squaresmall-plus { background-position: -48px -208px; }
 .ui-icon-squaresmall-minus { background-position: -64px -208px; }
 .ui-icon-squaresmall-close { background-position: -80px -208px; }
-.ui-icon-grip-dotted-vertical { background-position: 0 -224px; }
+.ui-icon-grip-dotted-vertical { }
 .ui-icon-grip-dotted-horizontal { background-position: -16px -224px; }
 .ui-icon-grip-solid-vertical { background-position: -32px -224px; }
 .ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
@@ -435,7 +439,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-dialog { position: absolute; padding: .1em; width: 300px; overflow: hidden; }
 .ui-dialog .ui-dialog-titlebar { padding: .4em 1em; position: relative;  }
 .ui-dialog .ui-dialog-title { float: left; margin: .1em 16px .1em 0; } 
-.ui-dialog .ui-dialog-titlebar-close { position: absolute; right: .3em; top: 50%; width: 19px; margin: -10px 0 0 0; padding: 1px; height: 18px; }
+.ui-dialog .ui-dialog-titlebar-close { position: absolute; right: .3em; top: 50%; width: 19px; margin: -10px 0 0 0; padding: 0px; height: 18px; }
 .ui-dialog .ui-dialog-titlebar-close span { display: block; margin: 1px; }
 .ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus { padding: 0; }
 .ui-dialog .ui-dialog-content { position: relative; border: 0; padding: 15px 0 0;; background: none repeat scroll 0 0 white; overflow: auto; zoom: 1; }
@@ -476,14 +480,14 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
  *
  * http://docs.jquery.com/UI/Tabs#theming
  */
-.ui-tabs { position: relative; padding: .2em; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.ui-tabs { position: relative; padding: 0; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 .ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0; }
 .ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; }
 .ui-tabs .ui-tabs-nav li a { float: left; padding: .5em 1em; text-decoration: none; }
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
 .ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
-.ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 1em 1.4em; background: none; }
+.ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 0; background: none; }
 .ui-tabs .ui-tabs-hide { display: none !important; }
 /*
  * jQuery UI Datepicker 1.8.18
@@ -575,6 +579,18 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
     color: #D8000C;
 }
 
+.ui-datatable table {
+    border-collapse: collapse;
+    color: #226177;
+    font-size: 11px;
+    background-color: #EEF5FF;
+}
+
+.ui-datatable .ui-datatable-header, .ui-datatable .ui-datatable-footer {
+    text-align: left;
+    font-size: 11px;
+}
+
 td.label {
     color: #335566;
     font-size: 11px;
@@ -585,6 +601,13 @@ td.label {
 
 .chp_crp_short, .chp_crp_long, .chp_crp {
 	background: url("../images_skin/input_text_bg.png");
+}
+
+.chp_crp_short {
+    background-repeat: repeat-x;
+    border: 1px inset #ECF3FD;
+    padding-left: 2px;
+    width: 60px;
 }
 
 .chp_crp_long {
@@ -618,6 +641,18 @@ div.do-prime-footer {
     background: url("../images_skin/icn-cancel.png");
 }
 
+.add {
+    background-image: url("../images_skin/icn-add.png");
+}
+
+a.open {
+    background-image: url("../images_skin/icn-open.png");
+}
+
+.deleteSelection {
+    background-image: url("../images_skin/icn-cancel.png");
+}
+
 .save, .cancel, .import, .search {
     height: 21px;
     margin-top: 3px;
@@ -637,4 +672,27 @@ div.do-prime-footer {
     padding-bottom: 4px;
     padding-left: 24px;
     text-align: left;
+}
+
+.add, .deleteSelection, .columns, .user, a.import, a.search, a.export, a.open {
+    background-repeat: no-repeat;
+    line-height: 24px;
+    padding: 4px 0 8px 25px;
+}
+
+.prime-toolbar {
+    background-image: url("../images_skin/rf-boolbar-style1-background.png");
+    border: 0 none;
+    height: 28px;
+    background-position: left top;
+    background-repeat: repeat-x;
+    padding: 0;
+}
+
+.prime-toolbar-separator {
+	background: none repeat scroll 0 0 transparent;
+}
+
+.prime-table-subheader {
+    background-color: #EEF5FF;
 }
