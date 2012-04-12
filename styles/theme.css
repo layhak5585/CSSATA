@@ -514,18 +514,38 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 	For Tab level 2
 **/
 .prime-tabs-lv2 { position: relative; padding: .2em; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
-.prime-tabs-lv2 .ui-tabs-nav { margin: 0; padding: .2em .2em 0; }
-.prime-tabs-lv2 .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; }
-.prime-tabs-lv2 .ui-tabs-nav li a { float: left; padding: .5em 1em; text-decoration: none; }
+.prime-tabs-lv2 .ui-tabs-nav { margin: 0; padding: .2em .1em 0; }
+.prime-tabs-lv2 .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 0.05em 1px 0.05em; border-bottom: 0 !important; padding: 0; white-space: nowrap; }
+.prime-tabs-lv2 .ui-tabs-nav li.ui-state-default, .prime-tabs-lv2 .ui-tabs-nav li.ui-corner-top{
+	background: url("../images_skin/rf-tabPannel-style1-cell-middlepart.png") repeat-x;
+	border-bottom:none;
+    border-top:1px solid #389AC1;
+    border-right:1px solid #389AC1;
+    border-left:1px solid #389AC1; 
+}
+
+.prime-tabs-lv2 .ui-tabs-nav li a {
+	float: left; 
+	padding: 0.3em 0.5em 0.05em 0.3em; 
+	text-decoration: none;	
+	color:#FFFFFF; }
+	
 .prime-tabs-lv2 .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }
-.prime-tabs-lv2 .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
-.prime-tabs-lv2 .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
-.prime-tabs-lv2 .ui-tabs-panel { 
+.prime-tabs-lv2 .ui-tabs-nav li.ui-tabs-selected a, .prime-tabs-lv2 .ui-tabs-nav li.ui-state-disabled a, .prime-tabs-lv2 .ui-tabs-nav li.ui-state-processing a { cursor: text;color:#3C586E; }
+.prime-tabs-lv2 .ui-tabs-nav li a, .prime-tabs-lv2.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.prime-tabs-lv2 .ui-tabs-panels { 
 	display: block; 
 	border-width: 0; 
-	padding: 1em 1.4em; 
+	padding: 0; 
 	background: none; 
-	border:1px solid #AED0EA;
+	border:1px solid #389AC1;
+	}
+
+.prime-tabs-lv2 .ui-tabs-panels .ui-tabs-panel{ 
+	display: block; 
+	border-width: 0; 
+	padding: 0; 
+	background: none; 
 	}
 	
 .prime-tabs-lv2 .ui-tabs-hide { display: none !important; }
@@ -533,11 +553,11 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .prime-tabs-lv2 .ui-tabs-nav li.ui-state-active{
 	background: url("../images_skin/rf-tabPannel-style1-cellactive-middlepart.png") repeat-x;
 	border-bottom:none;
-    border-top:1px solid #AED0EA;
-    border-right:1px solid #AED0EA;
-    border-left:1px solid #AED0EA; 
+    border-top:1px solid #389AC1;
+    border-right:1px solid #389AC1;
+    border-left:1px solid #389AC1;  
     font-weight: bold;
-    color:#000000;
+    color:#3C586E;
 }
 
 .prime-tabs-lv2 ul.ui-widget-header {
@@ -754,4 +774,9 @@ a.open {
 
 .prime-table-subheader {
     background-color: #EEF5FF;
+}
+
+.contenttab {
+    display: block;
+    margin: 15px;
 }
