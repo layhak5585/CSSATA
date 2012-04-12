@@ -71,6 +71,7 @@
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { }
 .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #000000; text-decoration: none; }
 .ui-widget :active { outline: none; }
+.ui-paginator-pages .ui-state-active { color: black;cursor: default; }
 
 /* Interaction Cues
 ----------------------------------*/
@@ -691,6 +692,10 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
     padding: 4px 10px;
 }
 
+.selectedTable .ui-datatable-data td, .selectedTable .ui-datatable-data-empty td {
+	padding: 0;
+}	
+
 .ui-datatable th {
 	border: 1px solid #C4C0C9;
 	text-align: left;
@@ -732,6 +737,41 @@ td.label {
     border: 1px inset #ECF3FD;
     padding-left: 2px;
     width: 240px;
+}
+
+.row-seleted {
+	background-image: url("../images_skin/rf-selected-row.png");
+    background-color: #E5EDF8;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    display: block;
+    font-weight: bold;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 25px;
+}
+
+.row-unseleted {
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    height: 23px;
+    line-height: 21px;
+    padding-left: 9px;
+    padding-top: 2px;
+}
+
+.openbusiness {
+    background-color: transparent;
+    background-image: url("../images/icn-open.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    border: 0 none;
+    cursor: pointer;
+    height: 20px;
+    margin: 0 10px;
+    width: 20px;
+	float: right;
 }
 
 .do-prime-footer {
