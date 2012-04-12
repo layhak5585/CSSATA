@@ -702,6 +702,12 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 	text-align: center;
 }
 
+.ui-toolbar-group-right {
+    float: right;
+    padding-right: 20px;
+    padding-top: 2px;
+}
+
 td.label {
     color: #335566;
     font-size: 11px;
