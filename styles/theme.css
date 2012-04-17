@@ -736,10 +736,19 @@ For tab level 3 tyle operation
     color: #D8000C;
 }
 
+.ui-messages-info, .ui-message-info {
+    background-color: transparent;
+    color: #00529B;
+}
+
 .ui-datatable table {
     border-collapse: collapse;
     color: #226177;
     font-size: 11px;
+}
+
+.ui-datatable-header table {
+	color: #FFFFFF;
 }
 
 .ui-datatable .ui-datatable-header, .ui-datatable .ui-datatable-footer {
@@ -775,10 +784,48 @@ For tab level 3 tyle operation
 	text-align: center;
 }
 
+.ui-chkbox .ui-chkbox-box {
+    background-color: white;
+    border-color: #111111 #AAAAAA #AAAAAA #111111;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    height: 16px;
+    margin-right: 3px;
+    width: 16px;
+}
+
+.ui-selectonemenu-panel .ui-selectonemenu-list {
+    background-color: white;
+    border: 1px solid #C4C0C9;
+    padding: 0.4em;
+}
+
+.ui-selectonemenu-list .ui-state-active {
+	font-weight: bold;
+}
+
+.ui-toolbar-group-left {
+  	float: left;
+    padding-left: 20px;
+    padding-top: 6px;	
+}
+
 .ui-toolbar-group-right {
     float: right;
     padding-right: 20px;
     padding-top: 2px;
+}
+
+.ui-toolbar-group-left a,  .ui-toolbar-group-right a{
+    color: #012C4E;
+    font-family: Arial,Verdana,sans-serif;
+    font-size: 11px;
+}
+
+.ui-toolbar-group-left a:hover,  .ui-toolbar-group-right a:hover{
+    color: #FF9900;
 }
 
 td.label {
@@ -922,6 +969,6 @@ a.open {
 
 .contenttab {
     display: block;
-    margin: 15px;
+    margin: 15px 8px 0;
 }
 
