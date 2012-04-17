@@ -486,24 +486,27 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
  */
 .ui-tabs { position: relative; padding: .2em; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 .ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0 2em; }
-.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; }
+.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; font-size: 14px; }
 .ui-tabs .ui-tabs-nav li span.ui-icon{
 	background-image: url("../images/close-tab.png");
 	background-position: 50% 50%;
+	border-right: 1px solid #000000;
+    height: 1.5em;
+    width: 2em;
 }
-.ui-tabs .ui-tabs-nav li a { float: left; padding: .5em 1em; text-decoration: none; margin-left: 0.5em;}
+.ui-tabs .ui-tabs-nav li a { float: left; padding: .5em 1em; text-decoration: none; margin-left: 0.5em;  font-weight: normal; color:black;}
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }
-.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; font-weight: bold;}
 .ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
-.ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 0 1em 0 1em; background: none; }
+.ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 1em 1em 0 1em; background: none; }
 .ui-tabs .ui-tabs-hide { display: none !important; }
-.ui-tabs.ui-tabs-top > .ui-tabs-nav {padding: 0.2em 0.2em 0 1em;}
+.ui-tabs.ui-tabs-top > .ui-tabs-nav {padding: 0.2em 0.2em 0 2em;}
 
 .ui-tabs .ui-tabs-nav li.ui-state-active{
-	background: url("../images_skin/rf-selected-row.png") no-repeat;
-    border: none;
-    font-weight: bold;
-    color:#000000;
+	background-image :url("../images_skin/rf-selected-row.png");
+	background-position: 0% 50%;
+    background-repeat: no-repeat;
+    border: none;  
 }
  .ui-tabs ul.ui-widget-header {    
     background:none;
@@ -520,7 +523,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 **/
 .prime-tabs-lv2 { position: relative; padding: 0; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 .prime-tabs-lv2 .ui-tabs-nav { margin: 0; padding: .2em .1em 0; }
-.prime-tabs-lv2 .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 0.05em 1px 0.05em; border-bottom: 0 !important; padding: 0; white-space: nowrap; }
+.prime-tabs-lv2 .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 0.05em 1px 0.05em; border-bottom: 0 !important; padding: 0; white-space: nowrap; font-size: 12px;}
 .prime-tabs-lv2 .ui-tabs-nav li.ui-state-default, .prime-tabs-lv2 .ui-tabs-nav li.ui-corner-top{
 	background-image : url("../images_skin/rf-tabPannel-style1-cell-middlepart.png");
 	background-position: 50% 50%;
@@ -557,6 +560,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 }
 	
 .prime-tabs-lv2 .ui-tabs-hide { display: none !important; }
+.prime-tabs-lv2.ui-tabs-top > .ui-tabs-nav {padding: 0.2em 0.2em 0 1em;}
 
 .prime-tabs-lv2 .ui-tabs-nav li.ui-state-active{
 	background-image: url("../images_skin/rf-tabPannel-style1-cellactive-middlepart.png");
@@ -587,7 +591,19 @@ For tab level 3 style operation
 
 .prime-tabs-lv3-operation { position: relative; padding: 0; zoom: 1;  margin-top:1em;} /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 .prime-tabs-lv3-operation .ui-tabs-nav { margin: 0; padding: .2em .1em 0; }
-.prime-tabs-lv3-operation .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 0.05em 1px 0.05em; border-bottom: 0 !important; padding: 0; white-space: nowrap; height:22px}
+.prime-tabs-lv3-operation .ui-tabs-nav li { 
+	list-style: none; 
+	float: left; 
+	position: relative; 
+	top: 1px;
+	border-bottom: 0 !important; 
+	margin: 0 0.5em 1px;
+    padding: 0.5em 0em 0 1.5em;
+	white-space: nowrap; 
+	height:22px;
+	font-size: 12px;
+	}
+	
 .prime-tabs-lv3-operation .ui-tabs-nav li.ui-state-default, .prime-tabs-lv3-operation .ui-tabs-nav li.ui-corner-top{
 	background:none;
 	border:none; 
@@ -598,6 +614,24 @@ For tab level 3 style operation
 	padding: 0.2em 0.5em 0.05em 0.3em; 
 	text-decoration: none;	
 	color:#336699; }
+	
+.prime-tabs-lv3-operation .ui-tabs-nav li.operation{
+	background-image :url("../images_skin/icn-operation.png");
+	background-position: 2% 52%;
+    background-repeat: no-repeat;
+}
+
+.prime-tabs-lv3-operation .ui-tabs-nav li.import{
+	background-image :url("../images_skin/icn-import.png");
+	background-position: 2% 52%;
+    background-repeat: no-repeat;
+}
+
+.prime-tabs-lv3-operation .ui-tabs-nav li.report{
+	background-image :url("../images_skin/icn-report.png");
+	background-position: 2% 52%;
+    background-repeat: no-repeat;
+}
 	
 .prime-tabs-lv3-operation .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }
 .prime-tabs-lv3-operation .ui-tabs-nav li.ui-tabs-selected a, .prime-tabs-lv3-operation .ui-tabs-nav li.ui-state-disabled a, .prime-tabs-lv3-operation .ui-tabs-nav li.ui-state-processing a { cursor: text;color:#336699; }
@@ -618,7 +652,7 @@ For tab level 3 style operation
 	}
 	
 .prime-tabs-lv3-operation .ui-tabs-hide { display: none !important; }
-
+.prime-tabs-lv3-operation.ui-tabs-top > .ui-tabs-nav {padding: 0.2em 0.2em 0 1em;}
 .prime-tabs-lv3-operation .ui-tabs-nav li.ui-state-active{
 	background-color:#E8F1FC;
 	border-bottom:none;
@@ -658,7 +692,7 @@ For tab level 4 style toolbar
 
 .prime-tabs-lv4-toolbar { position: relative; padding: 0; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 .prime-tabs-lv4-toolbar .ui-tabs-nav { margin: 0; padding: .2em .1em 0; }
-.prime-tabs-lv4-toolbar .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 1em 1px 0.05em; border-bottom: 0 !important; padding: 0; white-space: nowrap; height:22px}
+.prime-tabs-lv4-toolbar .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 1em 1px 0.05em; border-bottom: 0 !important; padding: 0; white-space: nowrap; height:22px;font-size: 12px;}
 .prime-tabs-lv4-toolbar .ui-tabs-nav li.ui-state-default, .prime-tabs-lv4-toolbar .ui-tabs-nav li.ui-corner-top{
 	background:none;
 	border:none; 
@@ -691,6 +725,7 @@ For tab level 4 style toolbar
 	}
 	
 .prime-tabs-lv4-toolbar .ui-tabs-hide { display: none !important; }
+.prime-tabs-lv4-toolbar.ui-tabs-top > .ui-tabs-nav {padding: 0.2em 0.2em 0 1em;}
 
 .prime-tabs-lv4-toolbar .ui-tabs-nav li.ui-state-active{
 	background:none;
@@ -1030,6 +1065,10 @@ input.import, a.import, span.import {
     padding: 0;
 }
 
+.prime-toolbar a{
+	margin-top:1em;
+}
+
 .prime-toolbar-separator {
 	background: none repeat scroll 0 0 transparent;
 }
@@ -1049,12 +1088,12 @@ input.import, a.import, span.import {
 **/
 
 .ui-fileupload{
-	border:1px solid #AED0EA;
+	border:1px solid #CCCCCC;
 }
 
 .ui-fileupload .ui-widget-header {
      background-image: url("../images_skin/rf-boolbar-style1-background.png");    
-  	border-bottom:1px solid #AED0EA;
+  	border-bottom:1px solid #CCCCCC;
     border-top:none;
     border-right:none;
     border-left:none; 
