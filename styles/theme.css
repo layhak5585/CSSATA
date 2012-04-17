@@ -55,7 +55,7 @@
 ----------------------------------*/
 .ui-widget { font-family: Arial, Verdana, sans-serif; font-size: 12px; }
 .ui-widget .ui-widget { font-size: 1em; }
-.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Lucida Grande, Lucida Sans, Arial, sans-serif; font-size: 1em; }
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Arial,Verdana,sans-serif; font-size: 11px; }
 .ui-widget-content { /* border: 1px solid #dddddd;background: #f2f5f7 url("../images_skin/ui-bg_highlight-hard_100_f2f5f7_1x100.png") 50% top repeat-x;  */ color: #362b36; }
 .ui-widget-content a { color: #362b36; }
 .ui-widget-header { border: 1px solid #aed0ea; background: url("../images_skin/fond-popup-header.png") repeat scroll 0 0 transparent; color: #FFFFFF; font-weight: bold; }
@@ -446,7 +446,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-dialog .ui-dialog-titlebar-close { position: absolute; right: .3em; top: 50%; width: 19px; margin: -10px 0 0 0; padding: 0px; height: 18px; }
 .ui-dialog .ui-dialog-titlebar-close span { display: block; margin: 1px; }
 .ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus { padding: 0; }
-.ui-dialog .ui-dialog-content { position: relative; border: 0; padding: 15px 0 0;; background: none repeat scroll 0 0 white; overflow: auto; zoom: 1; }
+.ui-dialog .ui-dialog-content { position: relative; border: 0; padding: 0 0 0;; background: none repeat scroll 0 0 white; overflow: auto; zoom: 1; }
 .ui-dialog .ui-dialog-buttonpane { text-align: left; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; }
 .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset { float: right; }
 .ui-dialog .ui-dialog-buttonpane button { margin: .5em .4em .5em 0; cursor: pointer; }
@@ -756,14 +756,14 @@ For tab level 4 style toolbar
  *
  * http://docs.jquery.com/UI/Datepicker#theming
  */
-.ui-datepicker { width: 17em; padding: .2em .2em 0; display: none; }
-.ui-datepicker .ui-datepicker-header { position:relative; padding:.2em 0; }
+.ui-datepicker { width: 17em; padding: .2em .2em 0; display: none; background-color: #F1EEE9; border: 1px solid #C4C0C9;}
+.ui-datepicker .ui-datepicker-header { position:relative; padding:.2em 0; background: none repeat scroll 0 0 transparent; border: medium none;}
 .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { position:absolute; top: 2px; width: 1.8em; height: 1.8em; }
-.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover { top: 1px; }
+.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover { top: 2px; }
 .ui-datepicker .ui-datepicker-prev { left:2px; }
 .ui-datepicker .ui-datepicker-next { right:2px; }
-.ui-datepicker .ui-datepicker-prev-hover { left:1px; }
-.ui-datepicker .ui-datepicker-next-hover { right:1px; }
+.ui-datepicker .ui-datepicker-prev-hover { left:2px; }
+.ui-datepicker .ui-datepicker-next-hover { right:2px; }
 .ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span { display: block; position: absolute; left: 50%; margin-left: -8px; top: 50%; margin-top: -8px;  }
 .ui-datepicker .ui-datepicker-title { margin: 0 2.3em; line-height: 1.8em; text-align: center; }
 .ui-datepicker .ui-datepicker-title select { font-size:1em; margin:1px 0; }
@@ -842,6 +842,10 @@ For tab level 4 style toolbar
     color: #00529B;
 }
 
+.ui-datatable-header .ui-selectonemenu .ui-selectonemenu-label {
+	height: 8px;
+}
+
 .ui-datatable table {
     border-collapse: collapse;
     color: #226177;
@@ -855,6 +859,16 @@ For tab level 4 style toolbar
 .ui-datatable .ui-datatable-header, .ui-datatable .ui-datatable-footer {
     text-align: left;
     font-size: 11px;
+}
+
+.ui-datatable-header a, .ui-datatable-footer a {
+    color: #FFFFFF;
+    font-family: Arial,Verdana,sans-serif;
+    font-size: 11px;
+}
+
+.ui-datatable-header a:hover,  .ui-datatable-footer a:hover{
+    color: #FF9900;
 }
 
 .ui-datatable .ui-datatable-data td, .ui-datatable .ui-datatable-data-empty td {
@@ -883,6 +897,10 @@ For tab level 4 style toolbar
 .ui-datatable tfoot td {
 	border: 1px solid #C4C0C9;
 	text-align: center;
+}
+
+.ui-datepicker-prev .ui-icon, .ui-datepicker-next .ui-icon {
+	background-image: url("../images_skin/ui-icons_72a7cf_256x240.png");
 }
 
 .ui-chkbox .ui-chkbox-box {
@@ -1000,7 +1018,7 @@ div.do-prime-footer {
     bottom: 0;
     height: 25px;
     left: 0;
-    margin-top: 20px;
+    margin-top: 0px;
     text-align: center;
     width: 100%;
     padding-top: 5px;
