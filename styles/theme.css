@@ -541,19 +541,20 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .prime-tabs-lv2 .ui-tabs-nav li.ui-tabs-selected a, .prime-tabs-lv2 .ui-tabs-nav li.ui-state-disabled a, .prime-tabs-lv2 .ui-tabs-nav li.ui-state-processing a { cursor: text;color:#3C586E; }
 .prime-tabs-lv2 .ui-tabs-nav li a, .prime-tabs-lv2.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
 .prime-tabs-lv2 .ui-tabs-panels { 
-	display: block; 
+	display: table; 
 	border-width: 0; 
 	padding: 0; 
 	background: none; 
 	border:1px solid #389AC1;
-	}
+	width: 100%;
+}
 
 .prime-tabs-lv2 .ui-tabs-panels .ui-tabs-panel{ 
-	display: block; 
+	display: table-cell; 
 	border-width: 0; 
 	padding: 0; 
 	background: none; 
-	}
+}
 	
 .prime-tabs-lv2 .ui-tabs-hide { display: none !important; }
 
@@ -1039,7 +1040,7 @@ input.import, a.import, span.import {
 
 .contenttab {
     display: block;
-    margin: 15px 8px 0;
+    margin: 15px 8px;
 }
 
 
