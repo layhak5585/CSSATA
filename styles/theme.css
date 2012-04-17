@@ -518,12 +518,14 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 /**
 	For Tab level 2
 **/
-.prime-tabs-lv2 { position: relative; padding: .2em; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.prime-tabs-lv2 { position: relative; padding: 0; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 .prime-tabs-lv2 .ui-tabs-nav { margin: 0; padding: .2em .1em 0; }
 .prime-tabs-lv2 .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 0.05em 1px 0.05em; border-bottom: 0 !important; padding: 0; white-space: nowrap; }
 .prime-tabs-lv2 .ui-tabs-nav li.ui-state-default, .prime-tabs-lv2 .ui-tabs-nav li.ui-corner-top{
-	background: url("../images_skin/rf-tabPannel-style1-cell-middlepart.png") repeat-x;
-	border-bottom:none;
+	background-image : url("../images_skin/rf-tabPannel-style1-cell-middlepart.png");
+	background-position: 50% 50%;
+    background-repeat: repeat-x;
+    border-bottom:none;
     border-top:1px solid #389AC1;
     border-right:1px solid #389AC1;
     border-left:1px solid #389AC1; 
@@ -556,7 +558,9 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .prime-tabs-lv2 .ui-tabs-hide { display: none !important; }
 
 .prime-tabs-lv2 .ui-tabs-nav li.ui-state-active{
-	background: url("../images_skin/rf-tabPannel-style1-cellactive-middlepart.png") repeat-x;
+	background-image: url("../images_skin/rf-tabPannel-style1-cellactive-middlepart.png");
+	background-position: 50% 50%;
+    background-repeat: repeat-x;
 	border-bottom:none;
     border-top:1px solid #389AC1;
     border-right:1px solid #389AC1;
@@ -577,10 +581,10 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 }
 
 /**
-For tab level 3 tyle operation
+For tab level 3 style operation
 **/
 
-.prime-tabs-lv3-operation { position: relative; padding: .2em; zoom: 1;  margin-top:1em;} /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.prime-tabs-lv3-operation { position: relative; padding: 0; zoom: 1;  margin-top:1em;} /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 .prime-tabs-lv3-operation .ui-tabs-nav { margin: 0; padding: .2em .1em 0; }
 .prime-tabs-lv3-operation .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 0.05em 1px 0.05em; border-bottom: 0 !important; padding: 0; white-space: nowrap; height:22px}
 .prime-tabs-lv3-operation .ui-tabs-nav li.ui-state-default, .prime-tabs-lv3-operation .ui-tabs-nav li.ui-corner-top{
@@ -638,6 +642,67 @@ For tab level 3 tyle operation
 
 .prime-tabs-lv3-operation ul.ui-widget-header {
    	background:none;
+    border:none;
+    color: #222222;
+    font-weight: bold;
+    padding:0;
+}
+
+
+
+
+/**
+For tab level 4 style toolbar
+**/
+
+.prime-tabs-lv4-toolbar { position: relative; padding: 0; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.prime-tabs-lv4-toolbar .ui-tabs-nav { margin: 0; padding: .2em .1em 0; }
+.prime-tabs-lv4-toolbar .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 1em 1px 0.05em; border-bottom: 0 !important; padding: 0; white-space: nowrap; height:22px}
+.prime-tabs-lv4-toolbar .ui-tabs-nav li.ui-state-default, .prime-tabs-lv4-toolbar .ui-tabs-nav li.ui-corner-top{
+	background:none;
+	border:none; 
+}
+
+.prime-tabs-lv4-toolbar .ui-tabs-nav li a {
+	float: left; 
+	padding: 0.2em 0.5em 0.05em 0.3em; 
+	text-decoration: none;	
+	color:#336699; 
+	font-weight: normal;
+	}
+	
+.prime-tabs-lv4-toolbar .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }
+.prime-tabs-lv4-toolbar .ui-tabs-nav li.ui-tabs-selected a, .prime-tabs-lv4-toolbar .ui-tabs-nav li.ui-state-disabled a, .prime-tabs-lv4-toolbar .ui-tabs-nav li.ui-state-processing a { cursor: text;color:#336699;     font-weight: bold;}
+.prime-tabs-lv4-toolbar .ui-tabs-nav li a, .prime-tabs-lv4-toolbar.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.prime-tabs-lv4-toolbar .ui-tabs-panels { 
+	display: block; 
+	border-width: 0; 
+	padding: 0; 
+	background: none; 
+	border-top:none;
+	}
+
+.prime-tabs-lv4-toolbar .ui-tabs-panels .ui-tabs-panel{ 
+	display: block; 
+	border-width: 0; 
+	padding: 0; 
+	background: none; 
+	}
+	
+.prime-tabs-lv4-toolbar .ui-tabs-hide { display: none !important; }
+
+.prime-tabs-lv4-toolbar .ui-tabs-nav li.ui-state-active{
+	background:none;
+	border:none;
+    color:#3C586E;
+}
+
+
+
+.prime-tabs-lv4-toolbar ul.ui-widget-header {   	
+	background-image: url("../images_skin/rf-boolbar-style1-background.png");
+    background-position: left top;
+    background-repeat: repeat-x;
     border:none;
     color: #222222;
     font-weight: bold;
@@ -893,7 +958,7 @@ a.open {
     cursor: pointer;
     font-weight: bold;
     margin-right: 20px;
-    padding-bottom: 4px;
+    padding-bottom: 6px;
     padding-left: 24px;
     text-align: left;
 }
@@ -901,6 +966,11 @@ a.open {
     background-repeat: no-repeat;
     line-height: 24px;
     padding: 4px 0 8px 25px;
+}
+
+input.import, a.import, span.import {
+    background-image: url("../images_skin/icn-import.png");
+    padding: 23px 0 8px 25px;
 }
 
 .prime-toolbar {
@@ -923,5 +993,27 @@ a.open {
 .contenttab {
     display: block;
     margin: 15px;
+}
+
+
+/**
+	Overwrite ui-fileupload
+**/
+
+.ui-fileupload{
+	border:1px solid #AED0EA;
+}
+
+.ui-fileupload .ui-widget-header {
+     background-image: url("../images_skin/rf-boolbar-style1-background.png");    
+  	border-bottom:1px solid #AED0EA;
+    border-top:none;
+    border-right:none;
+    border-left:none; 
+    font-weight: bold;
+}
+
+.ui-fileupload .fileupload-buttonbar {
+   padding:0 0 0 0;
 }
 
