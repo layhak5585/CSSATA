@@ -56,7 +56,7 @@
 .ui-widget { font-family: Arial, Verdana, sans-serif; font-size: 12px; }
 .ui-widget .ui-widget { font-size: 1em; }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Arial,Verdana,sans-serif; font-size: 11px; }
-.ui-widget-content { /* border: 1px solid #dddddd;background: #f2f5f7 url("../images_skin/ui-bg_highlight-hard_100_f2f5f7_1x100.png") 50% top repeat-x;  */ color: #362b36; }
+.ui-widget-content { /* background: #f2f5f7 url("../images_skin/ui-bg_highlight-hard_100_f2f5f7_1x100.png") 50% top repeat-x;  */ color: #362b36; }
 .ui-widget-content a { color: #362b36; }
 .ui-widget-header { border: 1px solid #aed0ea; background: url("../images_skin/fond-popup-header.png") repeat scroll 0 0 transparent; color: #FFFFFF; font-weight: bold; }
 .ui-widget-header a { color: #222222; }
@@ -899,6 +899,11 @@ For tab level 4 style toolbar
 	text-align: center;
 }
 
+.ui-datatable .noBorder td{
+	border: none;
+	padding:0;
+} 
+
 .ui-datepicker-prev .ui-icon, .ui-datepicker-next .ui-icon {
 	background-image: url("../images_skin/ui-icons_72a7cf_256x240.png");
 }
@@ -1122,3 +1127,41 @@ input.import, a.import, span.import {
    padding:0 0 0 0;
 }
 
+/**
+	Overwrite .ui-panel
+**/
+
+.ui-panel{
+	padding:0;
+}
+
+.ui-panel div.ui-widget-header{
+	border:none;
+}
+
+.ui-panel .ui-widget-content{
+	border:1px solid #CCCCCC;
+}
+
+/**
+	Overwrite ui-colorpicker
+**/
+
+.ui-colorpicker .ui-button{
+	border: 1px solid #CCCCCC;
+}
+
+
+.ui-spinner a.ui-button{
+	position: absolute;
+
+}
+
+.ui-spinner .ui-spinner-input{
+	background: url("../images_skin/input_text_bg.png") repeat scroll 0 0 transparent;
+	background-color: #FFFFFF;
+    background-repeat: repeat-x;
+    border: 1px inset #ECF3FD;
+    padding-left: 2px;
+   width:90%;
+}
