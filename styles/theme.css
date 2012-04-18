@@ -902,6 +902,7 @@ For tab level 4 style toolbar
 .ui-datatable .noBorder td{
 	border: none;
 	padding:0;
+	background: none;
 } 
 
 .ui-datepicker-prev .ui-icon, .ui-datepicker-next .ui-icon {
@@ -1076,7 +1077,7 @@ a.open {
 
 input.import, a.import, span.import {
     background-image: url("../images_skin/icn-import.png");
-    padding: 23px 0 8px 25px;
+    padding: 14px 0 8px 25px;
 }
 
 .prime-toolbar {
