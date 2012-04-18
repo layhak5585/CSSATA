@@ -962,6 +962,39 @@ For tab level 4 style toolbar
     color: #FF9900;
 }
 
+.ui-menu.ui-menu-dynamic, .ui-menu.ui-menu-sliding.ui-menu-dynamic {
+    background-color: #F1EEE9;
+}
+
+.ui-menuitem .ui-state-hover {
+	background-color: #FAE6B0;
+    border: 1px solid #E5973E;
+}
+
+.ui-menuitem-link .ui-icon-edit {
+	background-image: url("../images/edit.gif");
+	background-size: 100% auto;
+    margin-right: 5px;
+}
+
+.ui-menuitem-link .ui-icon-history {
+	background-image: url("../images/historique.gif");
+	background-size: 100% auto;
+    margin-right: 5px;
+}
+
+.ui-menuitem-link .ui-icon-view {
+	background-image: url("../images/viewxml.gif");
+	background-size: 100% auto;
+    margin-right: 5px;
+}
+
+.ui-menuitem-link .ui-icon-delete {
+	background-image: url("../images/delete.gif");
+	background-size: 100% auto;
+    margin-right: 5px;
+}
+
 td.label {
     color: #335566;
     font-size: 11px;
